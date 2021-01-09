@@ -5,12 +5,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class HelloWorldController {
-    @PostMapping("/")
+  
+    @GetMapping("/") // Annotation maps HTTP GET requests onto specific handler methods
     public String hello() {
         return "Hello world";
     }
-
-
+      @PostMapping("/")
+      public String hello() {
+        return "Hello world";
+    }
 }
